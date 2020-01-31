@@ -30,19 +30,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
-.forEach:
-- an array method we can use to execute a function on every element of the array
+.forEach: an array method we can use to execute a function on every element of the array
 
-.map:
-- returns a new array of elements while in turn passing each element back to the callback
+.map: returns a new array of elements while in turn passing each element back to the callback
 
 2. What is the difference between a function and a method?
 
+a function is not inside an object while a method is a function inside an object
+
 3. What is closure?
+
+Closure deals with context and the ability for a function to retrieve values for variables. When a function is declared and created, a new scope is also created. Any variables declared within that function’s scope will be enclosed in a lexical/private scope that belongs to that function. Also, it is important to remember that functions look outward for context. If some variable isn’t defined in a function’s scope, the function will look outside the scope chain and search for a variable being referenced in the outer scope.
 
 4. Describe the four rules of the 'this' keyword.
 
+The keyword 'this' is a pointer or reference to the object it's in. 'this' belongs to the instance of an object and refers to that instance alone.
+
 5. Why do we need super() in an extended class?
+
+super() is found in child objects and binds or refers back to properties and methods used in the parent object. The child object cannot inherit without the use of super(), as that is how the parent/child relationship is created.
 
 ## Project Set up
 
