@@ -131,23 +131,54 @@ const graduates = [{
   },
 ];
 
-/* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
+/* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings. */
 
+const universities = []; 
+
+/*
 Once you have the new array created, sort the universities alphabetically and log the result. */
+
 const universities = [];
+
+function compare(a, b) {
+  const universityA = a.university.toUpperCase();
+  const universityB = b.university.toUpperCase();
+
+  let comparison = 0;
+  if (universityA > universityB) {
+    comparison = 1;
+  } else if (universityA < universityB) {
+    comparison = -1;
+  }
+  return comparison;
+}
+
+universities.push(graduates.sort(compare));
 console.log(universities);
 
-/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
+/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings. 
 
 The resulting contact information strings should have a space between the first name and the email, like this: 
 "Josh josh@example.com"
 
 Log the result of your new array. */
 const contactInfo = [];
+graduates.forEach(function(item) {
+  return contactInfo.push(`${item.first_name} ${item.email}`);
+});
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
+
+
 const unisWithUni = [];
+let u = "";
+graduates.forEach(function(item) {
+  u = item.university;
+  if (u.search(/Uni/g) !== -1) {
+    unisWithUni.push(u);
+  }
+});
 console.log(unisWithUni);
 
 
