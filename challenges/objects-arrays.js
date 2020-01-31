@@ -283,6 +283,24 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
+
+
+displayNames.filter(x => {
+  if (x.match(/5/) !== -1) {
+    lowPopulationAnimals.push(x);
+  } else  if (x.match(/4/) !== -1) {
+    lowPopulationAnimals.push(x);
+  } else if (x.match(/3/) !== -1) {
+    lowPopulationAnimals.push(x);
+  } else if (x.match(/2/) !== -1) {
+    lowPopulationAnimals.push(x);
+  } else if (x.match(/1/) !== 1) {
+    lowPopulationAnimals.push(x);
+  } else if (x.match(/0/) !== -1) {
+    lowPopulationAnimals.push(x);
+  } 
+});
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
