@@ -161,9 +161,7 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
-graduates.forEach(function(item) {
-  return contactInfo.push(`${item.first_name} ${item.email}`);
-});
+graduates.forEach(item => contactInfo.push(`${item.first_name} ${item.email}`));
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
@@ -171,7 +169,7 @@ console.log(contactInfo);
 
 const unisWithUni = [];
 let u = "";
-graduates.forEach(function(item) {
+graduates.forEach(item => {
   u = item.university;
   if (u.search(/Uni/g) !== -1) {
     unisWithUni.push(u);
@@ -313,5 +311,11 @@ console.log(populationTotal);
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
+
+===
+
+arrow function work refactored.
+
+===
 */
 
