@@ -133,8 +133,6 @@ const graduates = [{
 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings. */
 
-const universities = []; 
-
 /*
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
@@ -316,3 +314,4 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
