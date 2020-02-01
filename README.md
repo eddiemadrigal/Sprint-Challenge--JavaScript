@@ -44,7 +44,10 @@ Closure deals with context and the ability for a function to retrieve values for
 
 4. Describe the four rules of the 'this' keyword.
 
-The keyword 'this' is a pointer or reference to the object it's in. 'this' belongs to the instance of an object and refers to that instance alone.
+- 1: When in the global scope, the value of “this” will be the window/console Object
+- 2: Whenever a preceding dot calls a function, the object before the dot is this.
+- 3: Whenever we use a constructor function, this refers to the specific instance of the object that is created and returned by the constructor function.
+- 4: Whenever we use JavaScript’s call or apply method, this is explicitly defined.
 
 5. Why do we need super() in an extended class?
 

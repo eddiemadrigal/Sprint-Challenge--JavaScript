@@ -6,62 +6,54 @@
   object name, diet, weight, length, period
 */
 
-class Dinosaur {
-  constructor(name, diet, weight, length, period) {
-    this.name = name;
-    this.diet = diet;
-    this.weight = weight;
-    this.length = length;
-    this.period = period;
-  }
-
-  showDietInfo() {
-    return `The ${this.name} ate ${this.diet}.`;
-  }
-
-  showWeightInfo() {
-    return `The ${this.name} weighed ${this.weight}.`;
-  }
-
-  showLengthInfo() {
-    return `The ${this.name} had a length of ${this.length}.`;
-  }
-
-  showPeriodInfo() {
-    return `The ${this.name} lived in the ${this.period}.`;
-  }
-}
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
-const tyrannosaurus = new Dinosaur('tyrannosaurus', 'carnivorous', '7000kg', '12m', 'Late Cretaceous');
+const tyrannosaurus = {
+  name: 'tyrannosaurus', 
+  diet: 'carnivorous', 
+  weight: '7000kg', 
+  length: '12m', 
+  period: 'Late Cretaceous',
+  roar: function() {
+    return 'RAWERSRARARWERSARARARRRR';
+  }
+};
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
-const stegosaurus = new Dinosaur('stegosaurus', 'herbivorous', '2000kg', '9m', 'Late Jurassic');
+const stegosaurus = {
+  name: 'stegosaurus', 
+  diet: 'herbivorous', 
+  weight: '2000kg', 
+  length: '9m', 
+  period: 'Late Jurassic'
+};
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
-const velociraptor = new Dinosaur('velociraptor', 'carnivorous', '15kg', '1.8m', 'Late Cretaceous');
+const velociraptor = {
+  name: 'velociraptor', 
+  diet: 'carnivorous', 
+  weight: '15kg', 
+  length: '1.8m', 
+  period: 'Late Cretaceous'
+};
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus.showWeightInfo());
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log(velociraptor.showDietInfo());
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log(stegosaurus.showLengthInfo());
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log(tyrannosaurus.showPeriodInfo());
-
+console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-Dinosaur.prototype.roar = function() {
-  return `RAWERSRARARWERSARARARRRR`;
-}
 console.log(tyrannosaurus.roar());
 
 
@@ -280,9 +272,9 @@ The zoos are concerned about animals with a lower population count. Using filter
 */
 const lowPopulationAnimals = [];
 
-let str = "";
+str = "";
 zooAnimals.filter(element => {
-  if (element.population < 6) {
+  if (element.population < 5) {
     myObj = `${element.animal_name}, ${element.population}`;
     lowPopulationAnimals.push(myObj);
   }
